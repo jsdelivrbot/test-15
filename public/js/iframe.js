@@ -13,11 +13,11 @@ function sendMessage(msgStr) {
 	window.parent.postMessage(msg, "*");
 }
 var files = {
-	"task1" : "jsTasks/task1#ArrayMethods.js",
-	"taks2" : "task2#ArraySort.js",
-	"taks3" : "task3#Request.js",
-	"taks4" : "task4#ParseURL.js",
-	"task5" : "task5#BrowserInfo.js"
+	"task1" : "jsTasks/task1_ArrayMethods.js",
+	"taks2" : "task2_ArraySort.js",
+	"taks3" : "task3_Request.js",
+	"taks4" : "task4_ParseURL.js",
+	"task5" : "task5_BrowserInfo.js"
 };
 
 function callBackOnMessage(event) {
