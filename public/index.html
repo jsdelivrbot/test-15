@@ -13,7 +13,7 @@
 					<a href="#task1">Task#1</a>
 				</li>
 				<li class="menu-item">
-					<a href="#">Task#2</a>
+					<a href="#task2">Task#2</a>
 				</li>
 				<li class="menu-item">
 					<a href="#">Task#3</a>
@@ -29,13 +29,13 @@
 				<h4>Result:</h4>
 				<table class="table-func">
 					<caption>Methods, which I've redefined:<button  class="button-for-hide" onclick="hidePartOfTable('task1');">show</button></caption>
-					<thead>
+					<thead id="hide-thead">
 						<tr>
 							<th>Method</th>
 							<th>Link to source-code</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody id="hide-tbody">
 						<tr>
 							<td>
 								<a href="https://www.tutorialspoint.com/javascript/array_concat.htm" target="_blank">Array.concat()</a>
@@ -121,12 +121,49 @@
 				<button type="submit" class="button-run" onclick="setScriptToIframe('task1')">&#9899;Run&#10068;</button> <!-- 10148-->
 				<div class="test-area">
 					<div>
+						<textarea rows="13" cols="50" class="code-area">Here You can type some lines of code...</textarea>
+					</div>
+					<div class="result-block">
+						<iframe src="result_iframe.html" width="100%" height="181px"></iframe>
+					</div>
+				</div>
+			</div>				
+			<div class="task-content" id="task2">
+				<h3 class="task-header">Task#2</h3>
+				<p>Sort Method</p>
+				<h4>Result:</h4>
+				<table class="table-func">
+					<thead>
+						<tr>
+							<th>Method</th>
+							<th>Link to source-code</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<a href="https://www.tutorialspoint.com/javascript/array_concat.htm" target="_blank">Array.concat()</a>
+							</td>
+							<td>
+								<a href="https://github.com/vhladii/web_tech_tasks/blob/1c40fc7d6f980e4db87ff2226e985a5db1e7eb6d/jsTasks/task1%23ArrayMethods.js#L39" target="_blank">gitHub</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<button type="submit" class="button-run" onclick="setScriptToIframe('task1')">&#9899;Run&#10068;</button> <!-- 10148-->
+				<div class="test-area">
+					<div>
 						<textarea rows="13" class="code-area">Here You can type some lines of code...</textarea>
 					</div>
 					<div class="result-block">
 						<iframe src="result_iframe.html" width="100%" height="181px"><iframe>
 					</div>
 				</div>
+			</div>
+			
+			
 		</div>
+				
+			
 	</body>
 </html>
