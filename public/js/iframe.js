@@ -25,14 +25,14 @@ function callBackOnMessage(event) {
 	var script = document.createElement("script");
 	var divResult = document.getElementById("block-results");
 	var file = files[obj["task"]];
-	
+	var code = obj["codeStr"];
 	script.src = file;
 	document.body.appendChild(script);
 	
 	while (divResult.firstChild) {
 		divResult.removeChild(divResult.firstChild);
 	}
-	setCodeInScript(obj["codeStr"]);
+	setCodeInScript(code);
 }
 
 function setCodeInScript(code) {
