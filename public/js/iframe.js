@@ -10,7 +10,7 @@ function bindEvent(element, eventName, eventHandler) {
 }
 
 function sendMessage(msgStr) {
-	window.parent.postMessage(msg, "*");
+	window.parent.postMessage(msg, window.location.host);
 }
 var files = {
 	"task1" : "jsTasks/task1#ArrayMethods.js",
@@ -24,7 +24,7 @@ function callBackOnMessage(event) {
 	var file = files[obj["task"]];
 	
 	script.src = file;
-	//document.body.appendChild(script);
+	document.body.appendChild(script);
 	
 	while (divResult.firstChild) {
 		divResult.removeChild(divResult.firstChild);
