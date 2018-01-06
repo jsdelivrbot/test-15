@@ -1,0 +1,38 @@
+ul.object-list {
+  list-style-type: none;
+}
+#block-results {
+	font-family: "Lucida Console", monospace;
+}
+.property-object {
+  color: #4700b3;
+}
+
+.array-element {
+  color: #800000;
+  margin: 2px;
+  padding: 2px;
+}
+
+.var-value {
+  color:#b30000;
+}
+
+.line-break{
+	border-top: 1px solid #8c8b8b;
+}
+
+.function-object {
+  background-color: #d9b3ff;
+}
+
+.array-object {
+  display: inline-block;
+  background-color: #f0f0f5;
+}
+
+.exception {
+	display: inline-block;
+	color: #b30000;
+	background-color: #ffcccc;
+}
