@@ -10,7 +10,7 @@ function bindEvent(element, eventName, eventHandler) {
 }
 
 function sendMessage(msgStr) {
-	window.parent.postMessage(msg, window.location.host);
+	window.parent.postMessage(msg, window.location.hostname);
 }
 var files = {
 	"task1" : "jsTasks/task1#ArrayMethods.js",
