@@ -10,11 +10,14 @@ function bindEvent(element, eventName, eventHandler) {
 }
 
 function sendMessage(msgStr) {
-	window.parent.postMessage(msg, window.location.hostname);
+	window.parent.postMessage(msg, "*");
 }
 var files = {
 	"task1" : "jsTasks/task1#ArrayMethods.js",
-	"taks2" : ""
+	"taks2" : "task2#ArraySort.js",
+	"taks3" : "task3#Request.js",
+	"taks4" : "task4#ParseURL.js",
+	"task5" : "task5#BrowserInfo.js"
 };
 
 function callBackOnMessage(event) {

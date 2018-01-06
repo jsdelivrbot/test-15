@@ -28,7 +28,7 @@ function setScriptToIframe(elemId) {
   };
   //iframeDocument.body.appendChild(script);
   
-  iframeWindow.postMessage(JSON.stringify(objToSend), window.location.hostname);
+  iframeWindow.postMessage(JSON.stringify(objToSend), "*");
   
   bindEvent(window, 'message', function (e) {
             alert(e);
