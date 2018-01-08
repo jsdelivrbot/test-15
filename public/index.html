@@ -186,12 +186,12 @@
 						</tr>
 					</tbody>
 				</table>
-				<p>For <code>containerId</code> you have to use <code>"block-results"</code></p>
+				<p>For <code>containerId</code> you have to use <code>"block-results"</code>. For example request <code>https://vhladii-web.herokuapp.com/hostInfo</code></p>
 				<p>For log result you may use func <code>logResult(/*Object, Func, Array, Primitive values*/)</code></p>
 				<button type="submit" class="button-run" onclick="setScriptToIframe('task3')">&#9899;Run&#10068;</button> <!-- 10148-->
 				<div class="test-area">
 					<div>
-						<textarea rows="13" cols="50" class="code-area" oninput="onChangeTextArea('task3');">Here You can type some lines of code...</textarea>
+						<textarea rows="13" cols="50" class="code-area" oninput="onChangeTextArea('task3');">readFile("https://vhladii-web.herokuapp.com/hostInfo","block-results");</textarea>
 					</div>
 					<div class="result-block">
 						<iframe src="result_iframe.html" width="100%" height="181px"></iframe>

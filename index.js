@@ -11,7 +11,7 @@ app.get('/', function(request, response) {
 
 app.get('/hostInfo', function(request, response) {
 	var obj = os.networkInterfaces(); 
-	response.send(obj);
+	response.send(JSON.stringify(obj,null,4));
 });
 
 app.listen(app.get('port'), function() {
