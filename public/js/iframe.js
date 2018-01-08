@@ -28,12 +28,16 @@ function callBackOnMessage(event) {
 	var script = document.createElement("script");
 	script.src = file;
 	script.defer = true;
-	document.body.appendChild(script);
 	
+	setTimeout(function() {
+		document.body.appendChild(script);
+	},0);
 	while (divResult.firstChild) {
 		divResult.removeChild(divResult.firstChild);
 	}
-	setCodeInScript(code);
+	setTimeout(function() {
+		setCodeInScript(code);
+	},500); 
 }
 
 function setCodeInScript(code) {
@@ -47,7 +51,6 @@ function setCodeInScript(code) {
 						\nfinally {\
 						\n sendResponse(err);\
 						\n}";
-	script.defer = true;
 	document.body.appendChild(script);
 }
 
