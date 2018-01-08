@@ -38,11 +38,11 @@ function callBackOnMessage(event) {
 function setCodeInScript(code) {
 	var script = document.createElement("script");
 	script.innerHTML += "try {\n";
-	script.innerHTML += code;
+	script.innerHTML += "eval('" + code + "');";
 	script.innerHTML += "\n} catch(ex) {\
 						\n var err = new Error(ex.message);\
-						\n err.name = ex.name;\n \
-						logResult(err);\n}";
+						\n err.name = ex.name;\
+						\n logResult(err);\n}";
 	document.body.appendChild(script);
 }
 
