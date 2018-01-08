@@ -118,10 +118,11 @@
 						</tr>
 					</tbody>
 				</table>
+				<p>For log result you may use func <code>logResult(/*Object, Func, Array, Primitive values*/)</code></p>
 				<button type="submit" class="button-run" onclick="setScriptToIframe('task1')">&#9899;Run&#10068;</button> <!-- 10148-->
 				<div class="test-area">
 					<div>
-						<textarea rows="13" cols="50" class="code-area">Here You can type some lines of code...</textarea>
+						<textarea rows="13" cols="50" class="code-area"  oninput="onChangeTextArea('task1');">Here You can type some lines of code...</textarea>
 					</div>
 					<div class="result-block">
 						<iframe src="result_iframe.html" width="100%" height="181px"></iframe>
@@ -142,18 +143,19 @@
 					<tbody>
 						<tr>
 							<td>
-								<a href="https://www.tutorialspoint.com/javascript/array_concat.htm" target="_blank">Array.concat()</a>
+								<code>Array.prototype.mySort(/*Compare Func*/)</code>
 							</td>
 							<td>
-								<a href="https://github.com/vhladii/web_tech_tasks/blob/1c40fc7d6f980e4db87ff2226e985a5db1e7eb6d/jsTasks/task1%23ArrayMethods.js#L39" target="_blank">gitHub</a>
+								<a href="https://github.com/vhladii/web_tech_tasks/blob/1c40fc7d6f980e4db87ff2226e985a5db1e7eb6d/jsTasks/task2%23ArraySort.js#L1" target="_blank">gitHub</a>
 							</td>
 						</tr>
 					</tbody>
 				</table>
-				<button type="submit" class="button-run" onclick="setScriptToIframe('task1')">&#9899;Run&#10068;</button> <!-- 10148-->
+				<p>For log result you may use func <code>logResult(/*Object, Func, Array, Primitive values*/)</code></p>
+				<button type="submit" class="button-run" onclick="setScriptToIframe('task2')">&#9899;Run&#10068;</button> <!-- 10148-->
 				<div class="test-area">
 					<div>
-						<textarea rows="13" class="code-area">Here You can type some lines of code...</textarea>
+						<textarea rows="13" cols="50" class="code-area" oninput="onChangeTextArea('task2');">Here You can type some lines of code...</textarea>
 					</div>
 					<div class="result-block">
 						<iframe src="result_iframe.html" width="100%" height="181px"></iframe>

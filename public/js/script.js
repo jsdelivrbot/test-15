@@ -15,28 +15,69 @@ function hidePartOfTable(elemId) {
   }
 }
 
+function onChangeTextArea(elemId) {
+	var elem = getTastContentById(elemId);
+	var button = elem.getElementsByClassName("button-run")[0];
+	
+	button.innerHTML = "Run&#9997;";
+}
+
+function getTastContentById(elemId) {
+	
+	if(!window.currentTask) {
+		window.currentTask = document.getElementById(elemId);
+	} else {
+		if(window.currentTask.id !== elemId) {
+			window.currentTask = document.getElementById(elemId);
+		}
+	}
+	
+	return window.currentTask;
+}
 
 function setScriptToIframe(elemId) {
-  var elem = document.getElementById(elemId);
+	onClickRunBtn(elemId);
+	
+  var elem = getTastContentById(elemId);
   var iframe = elem.getElementsByTagName('iframe')[0];
   var code = elem.getElementsByTagName('textarea')[0].value;
   var iframeWindow = iframe.contentWindow;
   
   var objToSend = {
 	  task: elemId,
-	  codeStr: code 
+	  codeStr: code
   };
-  //iframeDocument.body.appendChild(script);
-  
+
   iframeWindow.postMessage(JSON.stringify(objToSend), "*");
   
-  bindEvent(window, 'message', function (e) {
-            alert(e);
-  });
+  bindEvent(window, 'message',takeResponse );
   
 
 }
-
+function onClickRunBtn(elemId) {
+	var button = getTastContentById(elemId).getElementsByClassName("button-run")[0];
+	
+	button.innerHTML = "&#10160;Run...";
+	
+}
+function takeResponse(e) {
+	
+	if(!e) {
+		return;
+	}
+	
+	var button = currentTask.getElementsByClassName("button-run")[0];
+	var executedFlag = "";
+	
+	if(e.data === "OK") {
+		executedFlag = "&#9989;"
+	} else {
+		executedFlag = "&#10060;"	
+	}
+	
+	button.innerHTML = "Executed" + executedFlag;
+ }
+ 
  function bindEvent(element, eventName, eventHandler) {
 	if (element.addEventListener) {
 		 element.addEventListener(eventName, eventHandler, false);

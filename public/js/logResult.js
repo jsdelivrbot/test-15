@@ -4,23 +4,25 @@ function logResult(obj) {
   var divResult = document.getElementById("block-results");
 
   divResult.appendChild(br);
-  
-  if(obj instanceof Error) {
-	divResult.appendChild(logException(obj));
-  }else if(Array.isArray(obj)) {
-    divResult.appendChild(logArray(obj));
-  } else if(obj instanceof Function) {
-    divResult.appendChild(logFunction(obj));
-  } else if(obj instanceof Object) {
-    divResult.appendChild(logObject(obj));
-  } else {
-    divResult.appendChild(logValue(obj));
+  for(var i = 0; i < arguments.length; ++i) {
+	  
+	if(arguments[i] instanceof Error) {
+		divResult.appendChild(logException(arguments[i]));
+	}else if(Array.isArray(arguments[i])) {
+		divResult.appendChild(logArray(arguments[i]));
+	} else if(arguments[i] instanceof Function) {
+		divResult.appendChild(logFunction(arguments[i]));
+	} else if(arguments[i] instanceof Object) {
+		divResult.appendChild(logObject(arguments[i]));
+	} else {
+		divResult.appendChild(logValue(arguments[i]));
+	}
+	
+	var hr = document.createElement("hr");
+	hr.className = "line-break";
+	divResult.appendChild(hr);
   }
-
-  var hr = document.createElement("hr");
-  hr.className = "line-break";
-  divResult.appendChild(hr);
-
+  
   document.body.appendChild(divResult);
 }
 

@@ -14,18 +14,18 @@ function sendMessage(msgStr) {
 }
 var files = {
 	"task1" : "jsTasks/task1_ArrayMethods.js",
-	"taks2" : "task2_ArraySort.js",
-	"taks3" : "task3_Request.js",
-	"taks4" : "task4_ParseURL.js",
-	"task5" : "task5_BrowserInfo.js"
+	"taks2" : "jsTasks/task2_ArraySort.js",
+	"taks3" : "jsTasks/task3_Request.js",
+	"taks4" : "jsTasks/task4_ParseURL.js",
+	"task5" : "jsTasks/task5_BrowserInfo.js"
 };
 
 function callBackOnMessage(event) {
 	var obj = JSON.parse(event.data);
-	var script = document.createElement("script");
 	var divResult = document.getElementById("block-results");
 	var file = files[obj["task"]];
 	var code = obj["codeStr"];
+	var script = document.createElement("script");
 	script.src = file;
 	document.body.appendChild(script);
 	
@@ -37,12 +37,27 @@ function callBackOnMessage(event) {
 
 function setCodeInScript(code) {
 	var script = document.createElement("script");
-	script.innerHTML += "try {\n";
-	script.innerHTML += "eval('" + code + "');";
+	script.innerHTML += "var err = null;\ntry {\n";
+	script.innerHTML += code;
 	script.innerHTML += "\n} catch(ex) {\
-						\n var err = new Error(ex.message);\
+						\n err = new Error(ex.message);\
 						\n err.name = ex.name;\
-						\n logResult(err);\n}";
+						\n logResult(err);\n}\
+						\nfinally {\
+						\n sendResponse(err);\
+						\n}";
 	document.body.appendChild(script);
+}
+
+function sendResponse(err) {
+	var message = "";
+	
+	if(err == null) {
+		message = "OK";
+	} else {
+		message = "Error";
+	}
+	
+	window.parent.postMessage(message, "*");
 }
 
