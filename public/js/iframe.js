@@ -14,9 +14,9 @@ function sendMessage(msgStr) {
 }
 var files = {
 	"task1" : "jsTasks/task1_ArrayMethods.js",
-	"taks2" : "jsTasks/task2_ArraySort.js",
-	"taks3" : "jsTasks/task3_Request.js",
-	"taks4" : "jsTasks/task4_ParseURL.js",
+	"task2" : "jsTasks/task2_ArraySort.js",
+	"task3" : "jsTasks/task3_Request.js",
+	"task4" : "jsTasks/task4_ParseURL.js",
 	"task5" : "jsTasks/task5_BrowserInfo.js"
 };
 
