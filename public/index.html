@@ -19,10 +19,14 @@
 					<a href="#task3">Task#3</a>
 				</li>
 				<li class="menu-item">
-					<a href="#">Task#4</a>
+					<a href="#task4">Task#4</a>
+				</li>
+				<li class="menu-item">
+					<a href="#task5">Task#5</a>
 				</li>
 			</ul>
 		<div class="content">
+		<p>The source-code of this page-app you can fine <a href="https://github.com/vhladii/test" target="_blank">here</a></p>
 			<div class="task-content" id="task1">
 				<h3 class="task-header">Task#1</h3>
 				<p>Redefine the Methods of Array class</p>
@@ -166,7 +170,7 @@
 			
 			<div class="task-content" id="task3">
 				<h3 class="task-header">Task#3</h3>
-				<p>Sort Method</p>
+				<p>Request</p>
 				<h4>Result:</h4>
 				<table class="table-func">
 					<thead>
@@ -199,6 +203,77 @@
 				</div>
 			</div>
 			
+			<div class="task-content" id="task4">
+				<h3 class="task-header">Task#4</h3>
+				<p>Parse URL</p>
+				<h4>Result:</h4>
+				<table class="table-func">
+					<thead>
+						<tr>
+							<th>Method</th>
+							<th>Link to source-code</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<code>MyURL(stringURL)</code>
+							</td>
+							<td>
+								<a href="https://github.com/vhladii/web_tech_tasks/blob/master/jsTasks/task4%23ParseURL.js" target="_blank">gitHub</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>For log result you may use func <code>logResult(/*Object, Func, Array, Primitive values*/)</code></p>
+				<button type="submit" class="button-run" onclick="setScriptToIframe('task4')">&#9899;Run&#10068;</button> <!-- 10148-->
+				<div class="test-area">
+					<div>
+						<textarea rows="13" cols="50" class="code-area" oninput="onChangeTextArea('task4');">var u = new MyURL("https://user:pass@sub_.host.com:8080/p/a/t/h?query=string#hash");
+logResult(u);</textarea>
+					</div>
+					<div class="result-block">
+						<iframe src="result_iframe.html" width="100%" height="181px"></iframe>
+					</div>
+				</div>
+			</div>
+		
+		
+		<div class="task-content" id="task5">
+				<h3 class="task-header">Task#5</h3>
+				<p>Browser</p>
+				<h4>Result:</h4>
+				<table class="table-func">
+					<thead>
+						<tr>
+							<th>Method</th>
+							<th>Link to source-code</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<code>getBrowserInfo()</code>
+							</td>
+							<td>
+								<a href="https://github.com/vhladii/web_tech_tasks/blob/175c7e7801ee32069898be23871fbc8dab334a2a/jsTasks/task5%23BrowserInfo.js#L6" target="_blank">gitHub</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<button type="submit" class="button-run" onclick="setScriptToIframe('task5')">&#9899;Run&#10068;</button> <!-- 10148-->
+				<div class="test-area">
+					<div>
+						<textarea rows="13" cols="50" class="code-area" oninput="onChangeTextArea('task5');" readonly>var  obj = getBrowserInfo(); logResult(obj);</textarea>
+					</div>
+					<div class="result-block">
+						<iframe src="result_iframe.html" width="100%" height="181px"></iframe>
+					</div>
+				</div>
+			</div>
+		
+		
+		
 		</div>
 				
 			

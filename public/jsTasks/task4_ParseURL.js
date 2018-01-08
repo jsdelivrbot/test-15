@@ -16,7 +16,7 @@ function MyURL(stringURL) {
 
   function parseStringURL() {
 
-    const regex = /(\w*:)\/\/(?:(\w+):(\w+)\@)?(([\w\-_(\.|\b)]+)(?::([0-9]+))?)(\/[^\s^?]*\/?)(\?[^\s^\#\-]+=[^\s^\#]+)?(\#[^]*)?/mg;
+    const regex = /(\w*:)\/\/(?:(\w+):(\w+)\@)?(([\w\-\_(\.|\b)]+)(?::([0-9]+))?)(\/[^\s^?^#]*\/?)(\?[^\s^\#\-]+=[^\s^\#]+)?(\#[^]*)?/mg;
     var matches = regex.exec(str);
     return matches;
   }
