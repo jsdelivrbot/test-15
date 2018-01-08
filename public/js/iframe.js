@@ -27,6 +27,7 @@ function callBackOnMessage(event) {
 	var code = obj["codeStr"];
 	var script = document.createElement("script");
 	script.src = file;
+	script.defer = true;
 	document.body.appendChild(script);
 	
 	while (divResult.firstChild) {
@@ -46,6 +47,7 @@ function setCodeInScript(code) {
 						\nfinally {\
 						\n sendResponse(err);\
 						\n}";
+	script.defer = true;
 	document.body.appendChild(script);
 }
 
