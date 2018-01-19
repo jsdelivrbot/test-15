@@ -10,6 +10,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/hostInfo', function(request, response) {
+	console.log(request);
 	var obj = os.networkInterfaces(); 
 	response.send(JSON.stringify(obj,null,4));
 });
